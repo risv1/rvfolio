@@ -10,22 +10,21 @@ const Sphere: FC =()=>{
                 "HTML",
                 "CSS",
                 "JavaScript",
+                "TypeScript",
                 "React",
                 "Next",
                 "Remix",
                 "Go",
                 "Node",
                 "Express",
-                "MongoDB",
-                "MySQL",
+                "Python",
+                "C / C++",
                 "Postgres",
-                "Sass",
-                "Tailwind",
             ];
 
             const options = {
-                radius: 300,
-                maxSpeed: "normal",
+                radius: 250,
+                maxSpeed: "fast",
                 initSpeed: "normal",
                 keep: true,
             };
@@ -36,8 +35,8 @@ const Sphere: FC =()=>{
 
     return(
         <>
-            <div className="text-sphere">
-                <span className="tagcloud"></span>
+            <div className="text-sphere w-8/12">
+                <span className="tagcloud text-yellow-300 text-2xl font-bold"></span>
             </div>
         </>
     );
