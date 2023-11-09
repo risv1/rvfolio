@@ -7,7 +7,7 @@ const Horizontal = ({children}: {children: ReactNode}) => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-67%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"]);
 
   return (
     <div ref={targetRef} className="relative h-[300vh]">
