@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Reveal } from "./components/Reveal";
+import Reveal from "./components/Reveal";
 import Navbar from "./components/Navbar";
 import Sphere from "./components/Sphere";
 import Horizontal from "./components/Horizontal";

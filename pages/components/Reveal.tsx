@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, ReactNode } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-export const Reveal = ({children, width = "fit-content"}: {children: ReactNode, width: string}) => {
+const Reveal = ({children, width = "fit-content"}: {children: ReactNode, width: string}) => {
 
     const ref = useRef(null);
     const isInView = useInView(ref, {once: true});
@@ -50,3 +50,5 @@ export const Reveal = ({children, width = "fit-content"}: {children: ReactNode, 
         </div>
     );
 };
+
+export default Reveal;
