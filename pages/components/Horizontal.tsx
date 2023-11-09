@@ -7,16 +7,16 @@ const Horizontal = ({children}: {children: ReactNode}) => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-67%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+    <div ref={targetRef} className="relative h-[300vh]">
+      <div className="sticky top-0 flex h-screen items-center overflow-x-hidden">
         <motion.div style={{x}} className="flex gap-4 text-6xl">
             {children}
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import TagCloud from "TagCloud";
 const Sphere: FC =()=>{
     useEffect(()=>{
         return ()=>{
-            const container = ".tagcloud";
+            const container: string | Element[] = ".tagcloud";
             const texts = [
                 "HTML",
                 "CSS",

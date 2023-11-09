@@ -3,22 +3,27 @@ import { Reveal } from "./components/Reveal";
 import Navbar from "./components/Navbar";
 import Sphere from "./components/Sphere";
 import Horizontal from "./components/Horizontal";
+import Contact from "./components/Contact";
 
 const HomePage: FC = () => {
   return (
     <>
       <Navbar />
-      <div id="home" className="flex flex-row h-screen items-center">
-        <div className="text-sky-500 flex flex-col w-5/6 ml-10 mr-5">
+      <div
+        id="home"
+        className="flex flex-col sm:flex-row h-screen items-center"
+      >
+        <div className="text-sky-500 flex flex-col w-full sm:w-5/6 ml-5 sm:ml-10 mr-5">
           <div className="m-auto">
             <Reveal width="fit-content">
-              <h1 className="text-5xl font-bold">Rishi Viswanathan</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold">
+                Rishi Viswanathan
+              </h1>
             </Reveal>
           </div>
           <div className="m-auto mt-5">
-            {" "}
             <Reveal width="fit-content">
-              <p className="text-2xl text-white text-center">
+              <p className="text-xl sm:text-2xl text-white text-center">
                 Working on projects related to{" "}
                 <span className="text-yellow-400">Web Development</span> and
                 interested in{" "}
@@ -28,14 +33,16 @@ const HomePage: FC = () => {
             </Reveal>
           </div>
         </div>
-        <div className="mt-20 z-0">
+        <div className="mt-5 sm:mt-20 z-0">
           <Sphere />
         </div>
       </div>
-      <div id="about" className="pt-20 h-screen flex">
-        <div className="m-auto -w-1/2 p-8">
+      <div id="about" className="pt-10 sm:pt-20 h-screen flex">
+        <div className="m-auto w-full sm:w-1/2 p-8 ml-10">
           <Reveal width="fit-content">
-            <h1 className="text-3xl font-bold mb-4 text-white">About Me</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
+              About Me
+            </h1>
           </Reveal>
           <div className="mb-4">
             <a
@@ -56,9 +63,9 @@ const HomePage: FC = () => {
             </a>
           </div>
         </div>
-        <div className="w-1/2 p-8 text-white flex items-center mr-10">
+        <div className="w-full sm:w-1/2 p-8 text-white flex items-center sm:mr-10">
           <Reveal width="fit-content">
-            <p className="text-2xl ">
+            <p className="text-base sm:text-2xl">
               I'm a second-year student at SRM Institute of Science and
               Technology, and interested in Web Development, Machine Learning
               and Data Science. With a passion for coding and data, I aim to
@@ -69,27 +76,60 @@ const HomePage: FC = () => {
         </div>
       </div>
       <div id="other" className="h-screen text-white">
-        <Horizontal>
-          <div className="w-screen h-9/12 p-4 flex items-center justify-center flex-col">
-            <Reveal width="fit-content">
-              <h2>Projects</h2>
-            </Reveal>
-            <p>Projects</p>
-          </div>
-          <div className="w-screen h-9/12 p-4 flex items-center justify-center flex-col">
-            <Reveal width="fit-content">
-              {" "}
-              <h2>Academics</h2>
-            </Reveal>
-            <p>GPA: 9.33</p>
-          </div>
-          <div className="w-screen h-9/12 p-4 flex items-center justify-center flex-col">
-            <Reveal width="fit-content">
-              <h2>Hackerrank</h2>
-            </Reveal>
-            <p>Gold</p>
-          </div>
-        </Horizontal>
+        <div className="position-relative ">
+          <Horizontal>
+            <div className="w-screen h-1/3 pr-8 flex items-center justify-center flex-col">
+              <Reveal width="fit-content">
+                <h2 className="text-sky-500 text-5xl mb-10">Projects</h2>
+              </Reveal>
+              <div className="flex justify-center flex-row gap-5">
+                <div className="flex border w-1/4 flex-col justify-items-center rounded-xl bg-sky-800 text-yellow-400 hover:bg-yellow-400 hover:text-black hover:-translate-y-5 ease-in duration-300">
+                  <h2 className="font-bold text-2xl mt-5 mb-2 m-auto">
+                    Brain Tumor Detection
+                  </h2>
+                  <p className="text-xl ml-5 mb-5 mr-1">
+                    Built using OpenCV, C++, and Python to apply watershedding
+                    algorithm and determine tumor region.
+                  </p>
+                </div>
+                <div className="flex border w-1/4 flex-col justify-items-center rounded-xl bg-sky-800 text-yellow-400 hover:bg-yellow-400 hover:text-black hover:-translate-y-5 ease-in duration-300">
+                  <h2 className="font-bold text-2xl mt-5 mb-2 m-auto">Movie Loader</h2>
+                  <p className="text-xl ml-5 mb-5 mr-1">
+                    Built using React in the frontend, and Golang and Postgres,
+                    to add, remove and view movies to watch.
+                  </p>
+                </div>
+                <div className="flex border w-1/4 flex-col justify-items-center rounded-xl bg-sky-800 text-yellow-400 hover:bg-yellow-400 hover:text-black hover:-translate-y-5 ease-in duration-300">
+                  <h2 className="font-bold text-2xl mt-5 mb-2 m-auto">
+                    Scheduling Algorithms
+                  </h2>
+                  <p className="text-xl ml-5 mb-5 mr-1">
+                    Built using HTML, CSS, and Javascript to visualize the
+                    execution process of various CPU Scheduling Algorithms.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-screen h-1/3 p-4 flex items-center justify-center flex-col">
+              <Reveal width="fit-content">
+                {" "}
+                <h2>Academics</h2>
+              </Reveal>
+              <p>GPA: 9.33</p>
+            </div>
+            <div className="w-screen h-1/3 p-4 flex items-center justify-center flex-col">
+              <Reveal width="fit-content">
+                <h2>Hackerrank</h2>
+              </Reveal>
+              <p>Gold</p>
+            </div>
+          </Horizontal>
+        </div>
+      </div>
+      <div className="h-screen bg-blend"></div>
+      <div className="h-screen bg-blend"></div>
+      <div id="contact" className="pt-10 sm:pt-20 h-screen flex justify-center items-center">
+          <Contact />
       </div>
     </>
   );
